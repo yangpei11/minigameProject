@@ -1,6 +1,6 @@
 # minigame后段协议
 ## 获取验证码
-URL：/login/GetVerifyCode
+URL：http://81.71.140.100:80/login/GetVerifyCode
 
 + 输入格式：
 
@@ -22,11 +22,11 @@ ___
 ```json
 {	
 	code: 0, //0为成功，-1为错误
-	msg: "手机号码为空" //反馈的消息
+	msg: "手机号码为空"//反馈的消息
 }
 ```
 ## 验证码登陆
-URL：/login/Login
+URL：http://81.71.140.100:80/login/Login
 
 ```json
 {
@@ -35,10 +35,10 @@ URL：/login/Login
 
 parma
 {
-	
+	//要么传phoneNumber+verifyCode,要么传deciveID
 	phoneNumber:"110",  //手机号
 	verifyCode: "973920", //验证码
-	deviceID: "FE231Y" //设备ID
+	deviceID: "FE231Y"//设备ID
 }
 ```
 ___
@@ -56,7 +56,7 @@ ___
 ```
 
 ## 存档
-URL：/login/SaveData
+URL：http://81.71.140.100:80/login/SaveData
 
 ```json
 {
@@ -65,7 +65,7 @@ URL：/login/SaveData
 
 parma
 {
-	username"110",  //手机号或者设备ID
+	username:"110",  //手机号或者设备ID
 }
 ```
 ___
@@ -76,6 +76,6 @@ ___
 ```json
 {	
 	code: 0, //0为成功，-1为错误
-	msg: "验证码错误" //反馈的消息
+	msg:"验证码错误" //反馈的消息
 }
 ```
