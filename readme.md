@@ -66,6 +66,7 @@ URL：http://81.71.140.100:80/login/SaveData
 parma
 {
 	username:"110",  //手机号或者设备ID
+	data:存档数据""
 }
 ```
 ___
