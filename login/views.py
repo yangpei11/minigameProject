@@ -54,11 +54,16 @@ def getVerifyCode(request):
 def login(request):
     param = ""
     try:
+        print(request.POST)
         param = request.POST.get("param")
+        print(">>>>>")
+        print(param)
+        print(">>>>>")
     except:
         result = {"code": -1, "msg": "输入参数错误！"}
         return HttpResponse(json.dumps(result))
     param = json.loads(param)
+    print(param)
     if(param.get("deviceID", None) == None):
         phoneNumber = param["phoneNumber"]
         verifyCode = param["verifyCode"]
